@@ -174,7 +174,13 @@ $(document).ready(function() {
 	$(".leaflet-control-fullscreen-button").click( function() {
 		event.preventDefault();
 		map.setView([42.096662, -71.354828], 9);
-		formasShow();
+		
+		for(i= 0; i<formas.length; i++){
+			formas[i].setOpacity(10);
+			formas[i].redraw();
+			formas[i].bringToFront();
+		}
+		
 		$(".info").hide();
 	});
 });
