@@ -16,7 +16,10 @@
 </style>
 </head>
 <body>
-	<div class="leaflet-control-fullscreen leaflet-bar leaflet-control"><a class="leaflet-control-fullscreen-button leaflet-bar-part" href="#" title="Reset to Full Map View"></a></div>
+	<div class="leaflet-control-fullscreen leaflet-bar leaflet-control">
+		<input type="button" id="reset" value="Reset to Full Map View"/>
+	</div>
+	
     <div id='map'></div>
     <div class='my-legend'>
       <div class='legend-title'>Legend</div>
@@ -171,7 +174,7 @@
 $(document).ready(function() {
 	$(".info").hide();
   
-	$(".leaflet-control-fullscreen-button").click( function() {
+	$("#reset").click( function() {
 		event.preventDefault();
 		map.setView([42.096662, -71.354828], 9);
 		
