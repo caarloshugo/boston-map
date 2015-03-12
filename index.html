@@ -27,11 +27,15 @@
           <ul class='legend-labels'>
             <li>
               <img src="Logos/APlacetoTurn.png" id="10" width="30%" class="logo" position="top"/>
-              <div id="10" class="text-logo">A Place to Turn</div>
+              <div id="10" class="text-logo">A Place To Turn</div>
             </li>
             <li>
               <img src="Logos/Gleaners.jpg" id="0" width="30%" class="logo"/>
               <div id="0" class="text-logo">Boston Area Glearners</div>
+            </li>
+             <li>
+              <img src="Logos/CKUMB.png" id="12" width="30%" class="logo"/>
+              <div id="12" class="text-logo">Campus Kitchens</div>
             </li>
             <li>
               <img src="Logos/DedhamFood.png" id="2" width="30%" class="logo"/>
@@ -44,6 +48,10 @@
             <li>
               <img src="Logos/FoodforFree.png" id="3" width="30%" class="logo"/>
               <div id="3" class="text-logo">Food for Free</div>
+            </li>
+            <li>
+              <img src="Logos/foodlink official logo.png" id="13" width="30%" class="logo"/>
+              <div id="13" class="text-logo">Food Link</div>
             </li>
             <li>
               <img src="Logos/jfcs_familytable.png" id="7" width="30%" class="logo"/>
@@ -220,6 +228,10 @@ $(document).ready(function() {
 		formas.push(L.mapbox.tileLayer('papajundy.2x9io1or').addTo(map)); 
 		/* 11. Open Table. papajundy.089kvs4i */
 		formas.push(L.mapbox.tileLayer('papajundy.04b73nmi').addTo(map)); 
+    /* 12. CampusKitchens */
+    formas.push(L.mapbox.tileLayer('papajundy.ofl84cxr').addTo(map)); 
+    /* 13. FoodLink. */
+    formas.push(L.mapbox.tileLayer('papajundy.dzjgu8fr').addTo(map)); 
 		/* 0. Boston. Base */
 		formas.push(L.mapbox.tileLayer('papajundy.an1rwwmi').addTo(map));
     }
@@ -268,9 +280,27 @@ $(document).ready(function() {
         "type": "Point",
         "coordinates": [-71.159563,42.266542]
     },
-    "properties": {
+     "properties": {
         "index": 2,
-        "title": "<p><strong><center>Dedham Food Pantry</strong></p></center> <b> As we begin our 25th year of service to the community, we have grown to serve approximately 300 Dedham families in need, and distribute roughly 175,000 pounds of food each year.The Ride for Food has been transformative for us. It is our biggest fundraiser by far. It has helped us purchase more vegetables, fruit, milk and eggs, increase the number of visits per family, and allowed us to expand the opportunity for seniors to shop by adding an additional day to the schedule. The Ride for Food has not only increased our overall funding, but has increased awareness in the community for our work and the need we seek to address.",
+        "title": "<p><strong><center>Dedham Food Pantry</strong></p></center> <b> As we begin our 25th year of service to the community, we have grown to serve approximately 300 Dedham families in need, and distribute roughly 175,000 pounds of food each year. The Ride for Food has been transformative for us. It is our biggest fundraiser by far. It has helped us purchase more vegetables, fruit, milk and eggs, increase the number of visits per family, and allowed us to expand the opportunity for seniors to shop by adding an additional day to the schedule. The Ride for Food has not only increased our overall funding, but has increased awareness in the community for our work and the need we seek to address.",
+        "icon": {
+            "iconUrl": "http://i.imgur.com/icHsK08.png",
+                "iconSize": [25, 35], // size of the icon
+            "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, -40], // point from which the popup should open relative to the 
+            "className": "dot"
+        }
+      }
+    }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-71.036782,42.313575]
+    },
+ 
+    "properties": {
+        "index": 12,
+        "title": "<p><strong><center>Campus Kitchen</strong></p></center> <b> The Campus Kitchens Project (CKP) is a national leader in community service for students and is the future of hunger relief. CKP empowers the next generation of leaders to implement innovative models for combating hunger, developing food systems, and helping communities help themselves. Student volunteers at UMass Boston rescue food around Greater Boston to cook 1,000+ family-style meals each month using shared on-campus space. These meals are then delivered to organizations who serve our meals to those in need. In addition to cooking hundreds of meals each week, our students develop partnerships, plan menus, run cooking shifts, organize drivers, garden, glean, guide SNAP applicants, and teach nutrition education to children and families. Please join our team in this year's Ride for Food!",
         "icon": {
             "iconUrl": "http://i.imgur.com/icHsK08.png",
                 "iconSize": [25, 35], // size of the icon
@@ -280,6 +310,25 @@ $(document).ready(function() {
         }
     }
 }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-71.167524,42.427867]
+    },
+ 
+    "properties": {
+        "index": 13,
+        "title": "<p><strong><center>Food Link</strong></p></center> <b>  Started in 2012, Food Link works from Arlington to alleviate hunger locally by collecting nutritious food from local grocers and then distributing that food to organizations serving people in need throughout greater Boston. Utilizing over 70 volunteers, we distribute over 250,000 of annually, everything from fresh tomatoes to bananas and oranges to a wide range of meats.",
+        "icon": {
+            "iconUrl": "http://i.imgur.com/icHsK08.png",
+                "iconSize": [25, 35], // size of the icon
+            "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, -40], // point from which the popup should open relative to the 
+            "className": "dot"
+        }
+    }
+
+ },{
     "type": "Feature",
     "geometry": {
         "type": "Point",
@@ -338,7 +387,7 @@ $(document).ready(function() {
     },
     "properties": {
         "index": 6,
-        "title": "<p><strong><center>Wellesley Food Pantry</strong></p></center><b>Established in 1989, the Wellesley Food Pantry currently serves in excess of 200 households encompassing approximately 425 individuals. We are self-funded and run entirely by volunteers. The funding we receive through our participation in the Ride has been a huge boost to our efforts to provide more nutritious options to our growing client list. It’s also increased our client satisfaction through the additional choices we can offer and the improvements to the space in which we work. Overall, the Ride has benefited our pantry financially from an increase in awareness of our mission and needs. Please ride with us in September.",
+        "title": "<p><strong><center>Wellesley Food Pantry</strong></p></center><b>Established in 1989, the Wellesley Food Pantry currently serves in excess of 200 households encompassing approximately 450 individuals. We are self-funded and run entirely by volunteers. The funding we receive through our participation in the Ride has been a huge boost to our efforts to provide more nutritious options to our growing client list. It’s also increased our client satisfaction through the additional choices we can offer and the improvements to the space in which we work. Overall, the Ride has benefited our pantry financially from an increase in awareness of our mission and needs. Please ride with us in September.",
         "icon": {
            "iconUrl": "http://i.imgur.com/icHsK08.png",
                 "iconSize": [25, 35], // size of the icon
@@ -372,7 +421,7 @@ $(document).ready(function() {
     },
     "properties": {
         "index": 8,
-        "title": "<p><strong><center>The Food Project</strong></p></center><b>Since 1991, The Food Project has built a national model of engaging young people in personal and social change through sustainable agriculture. Each year, we work with over 150 teenagers and thousands of volunteers to farm on 40 acres in eastern Massachusetts in the towns and cities of Beverly, Boston, Lincoln, and Lynn. Food from our farms is distributed through our community supported agriculture programs and farmers’ markets, and donated to local hunger relief organizations. Money raised from the Ride for Food is used to help pay for our Farm to Family program, a subsidized CSA program that serves low-income families in Boston neighborhoods. The Ride for Food allowed us the opportunity to put our cause in front of people who otherwise might not know about us, gaining new community participation awareness. Last year, 2014, was our first year of participation, but we anticipate that we grow as part of the Ride as it continues to grow.",
+        "title": "<p><strong><center>The Food Project</strong></p></center><b>Since 1991, The Food Project has built a national model of engaging young people in personal and social change through sustainable agriculture. Each year, we work with 120 teenagers and over 3,000 volunteers to farm on more than 70 acres in eastern Massachusetts in the towns and cities of Beverly, Boston, Lincoln, Lynn, and Wenham. Food from our farms is distributed through our community supported agriculture programs and farmers’ markets, and donated to local hunger relief organizations. Money raised from the Ride for Food is used to help pay for our Farm to Family program, a subsidized CSA program that serves low-income families in Boston neighborhoods. The Ride for Food allowed us the opportunity to put our cause in front of people who otherwise might not know about us, gaining new community participation awareness. Last year, 2014, was our first year of participation, and we anticipate that our involvement and support will grow as the Ride continues to grow.",
         "icon": {
             "iconUrl": "http://i.imgur.com/icHsK08.png",
                 "iconSize": [25, 35], // size of the icon
@@ -406,7 +455,7 @@ $(document).ready(function() {
     },
     "properties": {
         "index": 10,
-        "title": "<p><strong><center>A Place to Turn</strong></p></center><b>A Place To Turn is an emergency food pantry and source of ongoing support for over 3,500 needy households and 12,000 individuals in the towns and cities making up the area known as Metrowest. We exist because of a caring community, and Three Squares New England is certainly part of that community. Our participation in The Ride For Food has had an enormous positive impact on our non-profit. As our agency’s largest fundraiser to date, we have has been able to purchase ever more nutritious perishable items for our clients, including fresh fruits and vegetables, meat, eggs and cheese.",
+        "title": "<p><strong><center>A Place To Turn</strong></p></center><b>A Place To Turn is an emergency food pantry and source of ongoing support for over 3,500 needy households and 12,000 individuals in the towns and cities making up the area known as Metrowest. We exist because of a caring community, and Three Squares New England is certainly part of that community. Our participation in The Ride For Food has had an enormous positive impact on our non-profit. As our agency’s largest fundraiser to date, we have been able to purchase even more nutritious perishable items for our clients, including fresh fruits and vegetables, meat, eggs and cheese.",
         "icon": {
            "iconUrl": "http://i.imgur.com/icHsK08.png",
                 "iconSize": [25, 35], // size of the icon
@@ -437,16 +486,19 @@ $(document).ready(function() {
 var text = new Array();
 text[0] = "<p><strong><center>Boston Area Gleaners</strong></p></center> <b> Since 2004, the Boston Area Gleaners has rescued over 300,000 pounds of fresh surplus produce from 40 local area farms and delivered this produce into Boston area food pantries and meal programs. When converted into 4-ounce servings, this is equivalent to over 1.2 million servings of fresh, local produce that would have otherwise gone to waste. The Ride for Food is a tremendous boost to us financially, and is helping us towards our goal of tripling the number of farms we glean and in order to rescue 1.2 million servings of fresh fruit and vegetables each year. Ride with us to make this a reality!";
 text[1] = "<p><strong><center>Ripples of Hope – Harvesting Seeds of Hope</strong></p></center> <b> Harvesting Seeds of Hope is a Ripples of Hope initiative which works to develop and fund community based food insecurity programs. In 2014 the Ride for Food provided critical funds in support of our program with Pine Street Inn’s permanent resident housing in Jamaica Plain to teach the basics of growing vegetables and the importance of fresh produce in maintaining a healthy diet. The Ride for Food epitomizes the spirit of philanthropy in action and will help us to sustain and expand these important community-based initiatives for Ripples of Hope.";
-text[2] = "<p><strong><center>Dedham Food Pantry</strong></p></center> <b> As we begin our 25th year of service to the community, we have grown to serve approximately 300 Dedham families in need, and distribute roughly 175,000 pounds of food each year. The Ride for Food has been transformative for us. It is our biggest fundraiser by far. It has helped us purchase more vegetables, fruit, milk and eggs, increase the number of visits per family, and allowed us to expand the opportunity for seniors to shop by adding an additional day to the schedule. The Ride for Food has not only increased our overall funding, but has increased awareness in the community for our work and the need we seek to address.";
+text[2] = "<p><strong><center>Dedham Food Pantry</strong></p></center> <b> As we begin our 25th year of service to the community, we have grown to serve approximately 300 Dedham families in need, and distribute roughly 175,000 pounds of food each year.  The Ride for Food has been transformative for us. It is our biggest fundraiser by far. It has helped us purchase more vegetables, fruit, milk and eggs, increase the number of visits per family, and allowed us to expand the opportunity for seniors to shop by adding an additional day to the schedule. The Ride for Food has not only increased our overall funding, but has increased awareness in the community for our work and the need we seek to address.";
 text[3] = "<p><strong><center>Food for Free</strong></p></center> <b> Food For Free responds to local hunger by rescuing fresh food that would otherwise go to waste and distributing it within the emergency food system where it can reach those in need. Our four main programs include 1) Food Rescue - serving 100+ food programs across 12 cities, 2) Home Delivery bringing food to 95 clients each month who are unable to access food pantries, 3) Field of Greens which is our own small farm program which harvests and then distributes 4,000-8,000 pounds of vegetables among the food programs we serve, and our 4) Transportation Partnership which picks up food from the Greater Boston Food Bank for 12 different food pantries. The Ride for Food offers us a way to raise significant funds at a very low cost ensuring every dollar raised goes that much further. It’s created an opportunity to expand our community and to partner with other food programs to raise awareness around community hunger and food justice. It has been an incredibly valuable resource to Food for Free.";
 text[4] = "<p><strong><center>First Church in Jamaica Plain Unitarian Universalist</strong></p></center> <b>The Food Pantry at First Church in Jamaica Plain began in 2009 by two women from the congregation who believed that our neighbors could be helped during tough times. We currently serve more than 100 people per month, many of whom have never previously asked for this kind of help. The Ride for Food has provided us with the opportunity to serve more people and increase the amount of food we distribute. Prior to participating in the Ride we were in grave danger of closing doors or decreasing the number of days open per month. Since our initial involvement with the Ride for Food we have achieved a comfort level that allows us to feel certain we can sustain the Food Pantry. Additionally, we have gained momentum in the community through outreach to various community stakeholders and business people. For all this we, and our visitors, are eternally grateful.";
 text[5] = "<p><strong><center>Needham Community Council</strong></p></center><b>The Needham Community Council has provided support on many levels to Needham residents since our establishment in 1930. We are the town’s only Food Pantry and currently serve an average of over 200 households per month, a significant increase over the past few years. Being part of the Ride for Food has been a huge benefit for our organization. Not only did we raise a significant amount of money, but it also increased the level of awareness in our community. Over and over we heard from donors to the Ride for Food that they “had no idea” of the level of food insecurity in our town and how happy they were to be asked by a rider to help support the Council’s mission to ensure that all Needham households have adequate food.";
-text[6] = "<p><strong><center>Wellesley Food Pantry</strong></p></center><b>Established in 1989, the Wellesley Food Pantry currently serves in excess of 200 households encompassing approximately 425 individuals. We are self-funded and run entirely by volunteers. The funding we receive through our participation in the Ride has been a huge boost to our efforts to provide more nutritious options to our growing client list. It’s also increased our client satisfaction through the additional choices we can offer and the improvements to the space in which we work. Overall, the Ride has benefited our pantry financially from an increase in awareness of our mission and needs. Please ride with us in September.";
+text[6] = "<p><strong><center>Wellesley Food Pantry</strong></p></center><b>Established in 1989, the Wellesley Food Pantry currently serves in excess of 200 households encompassing approximately 450 individuals. We are self-funded and run entirely by volunteers. The funding we receive through our participation in the Ride has been a huge boost to our efforts to provide more nutritious options to our growing client list. It’s also increased our client satisfaction through the additional choices we can offer and the improvements to the space in which we work. Overall, the Ride has benefited our pantry financially from an increase in awareness of our mission and needs. Please ride with us in September.";
 text[7] = "<p><strong><center>JF&CS Family Table</strong></p></center><b>As New England’s largest kosher food pantry, we provide healthy food on a monthly basis to over 400 families in need across more than 100 towns in across Greater Boston, the North and South Shores. Our clients are individuals and families in need, including people with disabilities, seniors living on fixed incomes, survivors of domestic abuse, and people who have experienced job loss or underemployment. We participated in the Ride for Food in 2014 for the first time, and connected nearly 200 people to our mission of providing food to those in need. We encourage you to ride with us in 2015.";
-text[8] = "<p><strong><center>The Food Project</strong></p></center><b>Since 1991, The Food Project has built a national model of engaging young people in personal and social change through sustainable agriculture. Each year, we work with over 150 teenagers and thousands of volunteers to farm on 40 acres in eastern Massachusetts in the towns and cities of Beverly, Boston, Lincoln, and Lynn. Food from our farms is distributed through our community supported agriculture programs and farmers’ markets, and donated to local hunger relief organizations. Money raised from the Ride for Food is used to help pay for our Farm to Family program, a subsidized CSA program that serves low-income families in Boston neighborhoods. The Ride for Food allowed us the opportunity to put our cause in front of people who otherwise might not know about us, gaining new community participation awareness. Last year, 2014, was our first year of participation, but we anticipate that we grow as part of the Ride as it continues to grow.";
+text[8] = "<p><strong><center>The Food Project</strong></p></center><b>Since 1991, The Food Project has built a national model of engaging young people in personal and social change through sustainable agriculture. Each year, we work with 120 teenagers and over 3,000 volunteers to farm on more than 70 acres in eastern Massachusetts in the towns and cities of Beverly, Boston, Lincoln, Lynn, and Wenham. Food from our farms is distributed through our community supported agriculture programs and farmers’ markets, and donated to local hunger relief organizations. Money raised from the Ride for Food is used to help pay for our Farm to Family program, a subsidized CSA program that serves low-income families in Boston neighborhoods. The Ride for Food allowed us the opportunity to put our cause in front of people who otherwise might not know about us, gaining new community participation awareness. Last year, 2014, was our first year of participation, and we anticipate that our involvement and support will grow as the Ride continues to grow.";
 text[9] = "<p><strong><center>Waltham Fields Community Farm</strong></p></center><b>Waltham Fields Community Farm is a nonprofit farming organization focusing on fresh food access, responsible food production, and field-to-fork education.  The Ride for Food will enable us to continue to grow and distribute organically-grown vegetables to Greater Boston residents in need of assistance and to provide hands-on experiences in our Learning Garden for hundreds of low-income youth.  Our mission is to promote local agriculture and food access through our farming operations and educational programs, using practices that are socially, ecologically, and economically sustainable. We encourage healthy relationships between people, their food supply, and the land from which it grows.";
-text[10] = "<p><strong><center>A Place to Turn</strong></p></center><b>A Place To Turn is an emergency food pantry and source of ongoing support for over 3,500 needy households and 12,000 individuals in the towns and cities making up the area known as Metrowest. We exist because of a caring community, and Three Squares New England is certainly part of that community. Our participation in The Ride For Food has had an enormous positive impact on our non-profit. As our agency’s largest fundraiser to date, we have has been able to purchase ever more nutritious perishable items for our clients, including fresh fruits and vegetables, meat, eggs and cheese.";
+text[10] = "<p><strong><center>A Place To Turn</strong></p></center><b>A Place To Turn is an emergency food pantry and source of ongoing support for over 3,500 needy households and 12,000 individuals in the towns and cities making up the area known as Metrowest. We exist because of a caring community, and Three Squares New England is certainly part of that community. Our participation in The Ride For Food has had an enormous positive impact on our non-profit. As our agency’s largest fundraiser to date, we have been able to purchase even more nutritious perishable items for our clients, including fresh fruits and vegetables, meat, eggs and cheese.";
 text[11] = "<p><strong><center>Open Table</strong></p></center><b>Open Table offers weekly community supper programs and food pantries in Concord and Maynard to more than 150 households in over 50 communities. Founded in 1989, we provide a welcoming community of support and assistance to families and individuals, including many seniors and children – all are welcome.";
+text[12] = "<p><strong><center>Campus Kitchens</strong></p></center><b>The Campus Kitchens Project (CKP) is a national leader in community service for students and is the future of hunger relief. CKP empowers the next generation of leaders to implement innovative models for combating hunger, developing food systems, and helping communities help themselves. Student volunteers at UMass Boston rescue food around Greater Boston to cook 1,000+ family-style meals each month using shared on-campus space. These meals are then delivered to organizations who serve our meals to those in need. In addition to cooking hundreds of meals each week, our students develop partnerships, plan menus, run cooking shifts, organize drivers, garden, glean, guide SNAP applicants, and teach nutrition education to children and families. Please join our team in this year's Ride for Food!";
+text[13] = "<p><strong><center>Food Link</strong></p></center><b>Started in 2012, Food Link works from Arlington to alleviate hunger locally by collecting nutritious food from local grocers and then distributing that food to organizations serving people in need throughout greater Boston. Utilizing over 70 volunteers, we distribute over 250,000 of annually, everything from fresh tomatoes to bananas and oranges to a wide range of meats.";
+
 
 
 
