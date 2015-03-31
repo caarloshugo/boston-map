@@ -184,7 +184,7 @@ $(document).ready(function() {
   
 	$("#reset").click( function() {
 		event.preventDefault();
-		map.setView([42.096662, -71.354828], 9);
+		map.setView([42.23055108552288, -71.37542724609375], 9);
 		
 		for(i= 0; i<formas.length; i++){
 			formas[i].setOpacity(10);
@@ -198,7 +198,7 @@ $(document).ready(function() {
 	
     L.mapbox.accessToken = 'pk.eyJ1IjoicGFwYWp1bmR5IiwiYSI6Ii1acVhNcDAifQ.wVhiXiJwFZnbg1xaK50Srw';
     var map = L.mapbox.map('map', 'papajundy.l95a8590', {
-}).setView([42.096662, -71.354828], 9);
+}).setView([42.23055108552288, -71.37542724609375], 9);
 
 
     var formas = [];
@@ -505,7 +505,7 @@ text[13] = "<p><strong><center>Food Link</strong></p></center><b>Started in 2012
 // Listen for individual marker clicks.
 $(".logo").click(function(){    
   var id = $(this).attr("id");
-
+   
   $("#info").html(text[id]);
 
 	for(i= 0; i<formas.length; i++){
